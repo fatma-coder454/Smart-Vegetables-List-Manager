@@ -9,34 +9,42 @@ body {
     min-height: 100vh;
     flex-direction: column;
 }
+
 .container {
     background-color: white;
     width: 90%;
     max-width: 1000px;
     padding: 20px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15),
-                0 4px 8px rgba(0, 0, 0, 0.07);
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15), 
+            0 4px 8px rgba(0, 0, 0, 0.07);
+
     border-radius: 8px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 20px;
 }
+
 h1 {
     font-size: 28px;
     color: #333;
     text-align: center;
     margin-bottom: 20px;
 }
+
 h1 i {
     margin-right: 10px;
     color: #4CAF50;
     font-size: 35px;
 }
+
 .main-content {
     display: flex;
     gap: 30px;
     justify-content: space-between;
 }
+
 .form-container {
     flex: 1;
     background-color: #ffffff;
@@ -44,17 +52,20 @@ h1 i {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
+
 h2 {
     font-size: 22px;
     margin-bottom: 10px;
     color: #333;
 }
+
 label {
     font-size: 16px;
     margin: 10px 0 5px;
     color: #555;
     display: block;
 }
+
 input {
     width: 100%;
     padding: 10px;
@@ -64,6 +75,7 @@ input {
     border-radius: 8px;
     box-sizing: border-box;
 }
+
 button {
     background-color: #4CAF50;
     color: white;
@@ -75,28 +87,35 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
+
 button:hover {
     background-color: #45a049;
 }
+
 button:disabled {
     background-color: #aaa;
     cursor: not-allowed;
 }
+
+/* قائمة الخضروات */
 .list-container {
     flex: 1;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    height: 300px;
+    height: 300px; 
     overflow-y: auto;
 }
+
+/* قائمة العناصر */
 ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    max-height: 100%;
+    max-height: 100%; 
 }
+
 li {
     background-color: #f9f9f9;
     padding: 12px;
@@ -107,20 +126,26 @@ li {
     justify-content: space-between;
     align-items: center;
 }
+
 li:nth-child(odd) {
     background-color: #fafafa;
 }
+
 .controls {
     display: flex;
     justify-content: space-between;
     gap: 10px;
 }
+
 .controls button {
     background-color: #007bff;
 }
+
 .controls button:hover {
     background-color: #0056b3;
 }
+
+/* نافذة الفلاتر */
 .modal {
     display: none;
     position: fixed;
@@ -131,6 +156,7 @@ li:nth-child(odd) {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
 }
+
 .modal-content {
     background-color: #ffffff;
     margin: 15% auto;
@@ -140,6 +166,7 @@ li:nth-child(odd) {
     max-width: 400px;
     text-align: center;
 }
+
 .close {
     color: #aaa;
     font-size: 24px;
@@ -148,12 +175,15 @@ li:nth-child(odd) {
     top: 10px;
     right: 10px;
 }
+
 .close:hover,
 .close:focus {
     color: rgb(250, 7, 7);
     text-decoration: none;
     cursor: pointer;
 }
+
+/* عرض إجمالي الكمية */
 .total-quantity {
     background-color: #4CAF50;
     color: white;
@@ -163,4 +193,31 @@ li:nth-child(odd) {
     border-radius: 8px;
     margin-top: 20px;
     text-align: center;
+}
+
+
+/* تنسيق الجدول داخل قائمة العناصر */
+li table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+li td {
+    width: 33.33%;
+    position: relative; 
+}
+
+li td span {
+    font-weight: bold;
+    color: #333;
+}
+
+li td i {
+    color: red;
+    cursor: pointer;
+    font-size: 18px;
+    position: absolute; 
+    right: 10px;
+    top: 50%; 
+    transform: translateY(-50%); 
 }
